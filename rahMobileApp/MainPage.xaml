@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="rahMobileApp.MainPage">
+
+    <StackLayout BackgroundColor="White">
+        <ListView x:Name="ListView1" RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="8,0,8,0">
+                            <Label Text="{Binding First_Name}" TextColor="#000" FontSize="14" LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding Last_Name}" TextColor="#000" LineBreakMode="TailTruncation" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image x:Name="PhotoImage" />
+            <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+        </Grid>
+    </StackLayout>
+
+    
+
+</ContentPage>
